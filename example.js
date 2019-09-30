@@ -4,7 +4,7 @@ const WASI = require("@wasmer/wasi");
 const file = "./cowsay.wasm";
 
 // Instantiate a new WASI Instance
-let wasi = new WASI({ args: ["a"], env: {} });
+let wasi = new WASI({ args: ["cowsay", "a"], env: {} });
 
 // Instantiating the WebAssembly file
 const wasm_bytes = new Uint8Array(fs.readFileSync(file)).buffer;
